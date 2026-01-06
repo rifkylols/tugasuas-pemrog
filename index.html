@@ -5,120 +5,183 @@
 <title>MTs Patra Mandiri Plaju</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
 body {
-  background:#05070d;
-  color:#eaeaea;
-  font-family: Inter, sans-serif;
+  background:#0b0e1a;
+  color:#e5e7eb;
 }
-section {
-  min-height:100vh;
-  position:relative;
-  display:flex;
-  align-items:center;
-}
-img.bg {
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-.overlay {
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to bottom, rgba(5,7,13,0.3), rgba(5,7,13,0.85));
-}
-.content {
-  position:relative;
-  max-width:1100px;
-  padding:0 60px;
-}
-h1,h2 {
-  font-family: Playfair Display, serif;
-}
-h1 {
-  font-size:64px;
-  margin-bottom:20px;
-}
-h2 {
-  font-size:48px;
-  margin-bottom:20px;
+h1,h2,h3 {
+  font-family:'Playfair Display',serif;
 }
 p {
-  max-width:560px;
-  line-height:1.7;
-  color:#d1d5db;
+  font-family:'Inter',sans-serif;
 }
-footer {
-  padding:60px;
-  text-align:center;
-  color:#9ca3af;
-}
-@media(max-width:768px){
-  h1 { font-size:42px; }
-  h2 { font-size:36px; }
-  .content { padding:0 24px; }
+.glass {
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(14px);
 }
 </style>
 </head>
 
 <body>
 
-<!-- SCENE 1 -->
-<section>
-  <img src="foto1.jpg" class="bg">
-  <div class="overlay"></div>
-  <div class="content">
-    <p style="letter-spacing:4px; color:#facc15; margin-bottom:24px;">
-      MADRASAH TSANAWIYAH
-    </p>
-    <h1>MTs Patra Mandiri<br>Plaju</h1>
-    <p>
-      Lingkungan pendidikan Islam tingkat menengah
-      yang tumbuh bersama disiplin,
-      ketenangan,
-      dan semangat belajar berkelanjutan.
-    </p>
+<!-- HERO -->
+<section class="relative min-h-screen flex items-center overflow-hidden">
+  <img src="foto1.jpg"
+       class="absolute inset-0 w-full h-full object-cover opacity-40">
+  <div class="absolute inset-0 bg-gradient-to-r from-[#0b0e1a] via-[#0b0e1a]/80 to-transparent"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-20 items-center">
+    <div>
+      <p class="tracking-widest text-sm text-yellow-400 mb-6">
+        MADRASAH TSANAWIYAH
+      </p>
+      <h1 class="text-6xl font-bold leading-tight mb-8">
+        MTs<br>Patra Mandiri<br>Plaju
+      </h1>
+      <p class="text-lg text-gray-300 max-w-xl mb-12">
+        Lembaga pendidikan Islam tingkat menengah
+        yang menekankan disiplin belajar,
+        ketenangan lingkungan,
+        dan pembentukan karakter peserta didik.
+      </p>
+      <button class="px-8 py-4 bg-yellow-500 text-black">
+        Kenali Madrasah
+      </button>
+    </div>
+
+    <div class="glass p-10">
+      <p class="text-sm text-gray-400 mb-4">Tentang Madrasah</p>
+      <p class="text-gray-300 leading-relaxed">
+        MTs Patra Mandiri Plaju menyelenggarakan pendidikan
+        dengan pendekatan akademik terarah,
+        pembinaan akhlak,
+        serta penguatan tanggung jawab sosial
+        dalam kehidupan sehari hari peserta didik.
+      </p>
+    </div>
   </div>
 </section>
 
-<!-- SCENE 2 -->
-<section>
-  <img src="foto2.jpg" class="bg">
-  <div class="overlay"></div>
-  <div class="content">
-    <h2>Lingkungan Madrasah</h2>
-    <p>
+<!-- VISI MISI -->
+<section class="py-32">
+  <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-3 gap-16">
+    <div>
+      <h2 class="text-4xl mb-6">Visi</h2>
+      <p class="text-gray-400 leading-relaxed">
+        Mewujudkan peserta didik
+        yang berilmu,
+        berakhlak,
+        dan siap melanjutkan pendidikan
+        ke jenjang berikutnya.
+      </p>
+    </div>
+    <div>
+      <h2 class="text-4xl mb-6">Misi</h2>
+      <p class="text-gray-400 leading-relaxed">
+        Menyelenggarakan pembelajaran terstruktur,
+        membangun budaya disiplin,
+        serta membina sikap tanggung jawab
+        dalam lingkungan madrasah.
+      </p>
+    </div>
+    <div>
+      <h2 class="text-4xl mb-6">Nilai</h2>
+      <p class="text-gray-400 leading-relaxed">
+        Disiplin belajar.
+        Etika.
+        Kebersamaan.
+        Kepedulian.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- LINGKUNGAN -->
+<section class="relative h-[80vh]">
+  <img src="foto2.jpg"
+       class="w-full h-full object-cover">
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="absolute bottom-20 left-20 max-w-xl">
+    <h2 class="text-5xl mb-6">
+      Lingkungan Madrasah
+    </h2>
+    <p class="text-gray-300">
       Area belajar yang tertata,
-      ruang terbuka,
-      dan suasana hijau
-      membentuk ritme belajar yang fokus dan nyaman.
+      suasana hijau,
+      dan lingkungan yang mendukung
+      fokus serta kenyamanan belajar.
     </p>
   </div>
 </section>
 
-<!-- SCENE 3 -->
-<section>
-  <img src="foto3.jpg" class="bg">
-  <div class="overlay"></div>
-  <div class="content">
-    <h2>Komunitas Peserta Didik</h2>
-    <p>
-      Kebersamaan.
-      Disiplin.
-      Tanggung jawab.
-      Nilai ini tumbuh melalui interaksi harian
-      di dalam dan di luar kelas.
+<!-- PROGRAM -->
+<section class="py-32">
+  <div class="max-w-7xl mx-auto px-8">
+    <h2 class="text-5xl mb-20">Program Pendidikan</h2>
+
+    <div class="grid md:grid-cols-3 gap-14">
+      <div class="glass p-10">
+        <h3 class="text-2xl mb-4">Pembelajaran Akademik</h3>
+        <p class="text-gray-400">
+          Pembelajaran kurikulum nasional
+          dengan penguatan pemahaman konsep
+          dan kebiasaan belajar mandiri.
+        </p>
+      </div>
+
+      <div class="glass p-10">
+        <h3 class="text-2xl mb-4">Pembinaan Keagamaan</h3>
+        <p class="text-gray-400">
+          Kegiatan keagamaan terjadwal
+          untuk membangun sikap religius
+          dan kedisiplinan ibadah.
+        </p>
+      </div>
+
+      <div class="glass p-10">
+        <h3 class="text-2xl mb-4">Pembentukan Karakter</h3>
+        <p class="text-gray-400">
+          Pembiasaan sikap tertib,
+          tanggung jawab,
+          serta kerja sama antar peserta didik.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KOMUNITAS -->
+<section class="relative h-[80vh]">
+  <img src="foto3.jpg"
+       class="w-full h-full object-cover">
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="absolute bottom-20 left-20 max-w-xl">
+    <h2 class="text-5xl mb-6">
+      Komunitas Peserta Didik
+    </h2>
+    <p class="text-gray-300">
+      Kebersamaan dalam belajar,
+      kegiatan bersama,
+      dan interaksi positif
+      menjadi bagian dari kehidupan madrasah.
     </p>
   </div>
 </section>
 
-<footer>
-  MTs Patra Mandiri Plaju
+<!-- FOOTER -->
+<footer class="py-20 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
+    <p class="text-gray-500">
+      MTs Patra Mandiri Plaju
+    </p>
+    <p class="text-gray-500">
+      Pendidikan Islam Tingkat Menengah
+    </p>
+  </div>
 </footer>
 
 </body>
